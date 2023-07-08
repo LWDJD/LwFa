@@ -1,5 +1,5 @@
 name: LwLogin
-version: '1.2.0.2'
+version: '1.2.0.3'
 main: org.example_1.lwlogin_1.LwLogin_1
 api-version: 1.20
 commands:
