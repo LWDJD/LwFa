@@ -8,10 +8,9 @@
 
 **指令**：
 /fa true #开启防误丢
-/fa false #关闭防误丢	
+/fa false #关闭防误丢
 /fa message true #开启丢物品提示
 /fa message false #关闭丢物品提示
-
 
 ## 版本
 
