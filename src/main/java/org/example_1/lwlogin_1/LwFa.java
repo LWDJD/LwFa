@@ -14,7 +14,7 @@ import org.example_1.lwlogin_1.commands.TabCommand;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class LwLogin_1 extends JavaPlugin implements Listener {
+public final class LwFa extends JavaPlugin implements Listener {
 
     public static List<List<String>> cPlayer = new ArrayList<>(); // 使用ArrayList来动态存储字符串
     public static List<List<String>> message = new ArrayList<>(); // 使用ArrayList来动态存储字符串
@@ -24,12 +24,12 @@ public final class LwLogin_1 extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(this, this); //这里LwLogin_1类是监听器, 将当前HelloWorld对象注册监听器
         getCommand("failsafediscard").setExecutor(new FailSafeDiscard());//实现命令
         this.getCommand("failsafediscard").setTabCompleter(new TabCommand(this));
-        this.getLogger().info("登录插件1.2已装载");
+        this.getLogger().info("防误丢1.2已装载");
     }
 
     @Override
     public void onDisable() {
-        this.getLogger().info("登录插件1.2已卸载");
+        this.getLogger().info("防误丢1.2已卸载");
     }
 
     /*玩家加入服务器时将玩家放到防误丢名单

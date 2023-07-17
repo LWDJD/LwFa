@@ -4,7 +4,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.example_1.lwlogin_1.LwLogin_1;
+import org.example_1.lwlogin_1.LwFa;
 import org.bukkit.entity.Player;
 
 
@@ -41,9 +41,9 @@ public class FailSafeDiscard implements CommandExecutor {
             if (args[0].equalsIgnoreCase("true")) {
                 int g = -1; // 初始化g为-1，表示没有找到匹配的字符串
                 boolean h = false; // 初始化h为false，表示没有找到匹配的字符串
-                for (int i = 0; i < LwLogin_1.cPlayer.size(); i++) { // 遍历cPlayer列表
-                    for (int k = 0; k < LwLogin_1.cPlayer.get(i).size(); k++) { // 遍历cPlayer列表中每个子列表
-                        if (sender.getName().equals(LwLogin_1.cPlayer.get(i).get(0))) { // 如果找到匹配的字符串
+                for (int i = 0; i < LwFa.cPlayer.size(); i++) { // 遍历cPlayer列表
+                    for (int k = 0; k < LwFa.cPlayer.get(i).size(); k++) { // 遍历cPlayer列表中每个子列表
+                        if (sender.getName().equals(LwFa.cPlayer.get(i).get(0))) { // 如果找到匹配的字符串
                             h = true; // 将h设为true
                             g = i; // 将g设为当前索引
                             break; // 跳出循环
@@ -53,15 +53,15 @@ public class FailSafeDiscard implements CommandExecutor {
                         break;
                     }
                 }
-                LwLogin_1.cPlayer.get(g).set(1, "true");
+                LwFa.cPlayer.get(g).set(1, "true");
                 sender.sendMessage(ChatColor.GREEN + "防误丢已开启");
                 return true;
             } else if (args[0].equalsIgnoreCase("false")) {
                 int g = -1; // 初始化g为-1，表示没有找到匹配的字符串
                 boolean h = false; // 初始化h为false，表示没有找到匹配的字符串
-                for (int i = 0; i < LwLogin_1.cPlayer.size(); i++) { // 遍历cPlayer列表
-                    for (int k = 0; k < LwLogin_1.cPlayer.get(i).size(); k++) { // 遍历cPlayer列表中每个子列表
-                        if (sender.getName().equals(LwLogin_1.cPlayer.get(i).get(0))) { // 如果找到匹配的字符串
+                for (int i = 0; i < LwFa.cPlayer.size(); i++) { // 遍历cPlayer列表
+                    for (int k = 0; k < LwFa.cPlayer.get(i).size(); k++) { // 遍历cPlayer列表中每个子列表
+                        if (sender.getName().equals(LwFa.cPlayer.get(i).get(0))) { // 如果找到匹配的字符串
                             h = true; // 将h设为true
                             g = i; // 将g设为当前索引
                             break; // 跳出循环
@@ -71,7 +71,7 @@ public class FailSafeDiscard implements CommandExecutor {
                         break;
                     }
                 }
-                LwLogin_1.cPlayer.get(g).set(1, "false");
+                LwFa.cPlayer.get(g).set(1, "false");
                 sender.sendMessage(ChatColor.RED + "防误丢已关闭");
                 return true;
             } else {
@@ -83,9 +83,9 @@ public class FailSafeDiscard implements CommandExecutor {
                 if (args[1].equalsIgnoreCase("true")) {
                     int g = -1; // 初始化g为-1，表示没有找到匹配的字符串
                     boolean h = false; // 初始化h为false，表示没有找到匹配的字符串
-                    for (int i = 0; i < LwLogin_1.message.size(); i++) { // 遍历massage列表
-                        for (int k = 0; k < LwLogin_1.message.get(i).size(); k++) { // 遍历massage列表中每个子列表
-                            if (sender.getName().equals(LwLogin_1.message.get(i).get(0))) { // 如果找到匹配的字符串
+                    for (int i = 0; i < LwFa.message.size(); i++) { // 遍历massage列表
+                        for (int k = 0; k < LwFa.message.get(i).size(); k++) { // 遍历massage列表中每个子列表
+                            if (sender.getName().equals(LwFa.message.get(i).get(0))) { // 如果找到匹配的字符串
                                 h = true; // 将h设为true
                                 g = i; // 将g设为当前索引
                                 break; // 跳出循环
@@ -95,16 +95,16 @@ public class FailSafeDiscard implements CommandExecutor {
                             break;
                         }
                     }
-                    LwLogin_1.message.get(g).set(1, "true");
+                    LwFa.message.get(g).set(1, "true");
                     sender.sendMessage(ChatColor.GREEN + "物品丢出提醒开启");
                     return true;
                 }
                 else if (args[1].equalsIgnoreCase("false")) {
                     int g = -1; // 初始化g为-1，表示没有找到匹配的字符串
                     boolean h = false; // 初始化h为false，表示没有找到匹配的字符串
-                    for (int i = 0; i < LwLogin_1.message.size(); i++) { // 遍历massage列表
-                        for (int k = 0; k < LwLogin_1.message.get(i).size(); k++) { // 遍历massage列表中每个子列表
-                            if (sender.getName().equals(LwLogin_1.message.get(i).get(0))) { // 如果找到匹配的字符串
+                    for (int i = 0; i < LwFa.message.size(); i++) { // 遍历massage列表
+                        for (int k = 0; k < LwFa.message.get(i).size(); k++) { // 遍历massage列表中每个子列表
+                            if (sender.getName().equals(LwFa.message.get(i).get(0))) { // 如果找到匹配的字符串
                                 h = true; // 将h设为true
                                 g = i; // 将g设为当前索引
                                 break; // 跳出循环
@@ -114,7 +114,7 @@ public class FailSafeDiscard implements CommandExecutor {
                             break;
                         }
                     }
-                    LwLogin_1.message.get(g).set(1, "false");
+                    LwFa.message.get(g).set(1, "false");
                     sender.sendMessage(ChatColor.RED + "物品丢出提醒关闭");
                     return true;
                 }
