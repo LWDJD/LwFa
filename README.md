@@ -6,7 +6,7 @@
 
 ## 如何使用
 
-**指令**：
+**指令**：<br />
 /fa true #开启防误丢<br />
 /fa false #关闭防误丢<br />
 /fa message true #开启丢物品提示<br />
