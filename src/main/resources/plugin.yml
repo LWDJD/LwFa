@@ -1,9 +1,9 @@
 name: LwLogin
-version: '1.2.0.3'
+version: '1.2.1.5'
 main: org.example_1.lwlogin_1.LwLogin_1
 api-version: 1.20
 commands:
   failsafediscard:
-    usage: 用法:/failsafediscard [boolean] or /failsafediscard massage [boolean]
+    usage: 用法:/failsafediscard [boolean] or /failsafediscard message [boolean]
     aliases: fa
     description: 防误丢物品命令
